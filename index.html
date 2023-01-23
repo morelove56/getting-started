@@ -54,7 +54,7 @@
     outline: 0;
     }
 ::placeholder{
-    font-size: 14px;
+    font-size: 17px;
 }
 
 form button{
@@ -73,18 +73,18 @@ form button{
     position: absolute;
     bottom: 12px;
     right: 17px;
-    font-size: 12px;
+    font-size: 15px;
     color: red;
 }
 .input-group span i{
     color: #26C28A;
     margin-bottom: 2px;
 }
-.ib{
-    color: red;
+.i{
+    color: #26C28A;
+    margin-bottom: 2px;
 }
 </style>
-    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="container">
@@ -125,7 +125,7 @@ form button{
      phoneError.innerHTML = 'incorrect<br>(6-digits)';
         return false;
       }
-     phoneError.innerHTML = '<i class="fas fa-check-circle"></i>';
+     phoneError.innerHTML = '<p class="i">&#10004</p>';
         return true;
  }
 function validateForm(){
